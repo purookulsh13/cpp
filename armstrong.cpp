@@ -3,19 +3,18 @@ using namespace std;
 
 int main()
 {
-    int n,temp,rem,arm=0;
-    cin>>n;
-    temp=n;
-    while(temp!=0)
+    int num,res=0;
+    cin>>num;
+    int k=num;
+    while(num!=0)
     {
-        rem=temp%10;
-        arm+=rem*rem*rem;
-        temp=temp/10;
+        int rem=num%10;
+        res=res+(rem*rem*rem);
+        num=num/10;
     }
 
-    if(arm==n)
+    if(res==k)
         cout<<"Armstrong number";
     else
-        cout<<"Not a Armstrong number";
-    return 0;
+        cout<<"Not a armstrong number";
 }
